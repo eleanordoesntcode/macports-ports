@@ -4,7 +4,7 @@ PortSystem          1.0
 PortGroup           github 1.0
 
 name                audacity
-version             3.7.1
+version             3.7.3
 categories          audio
 license             GPL-3
 maintainers         {makr @mohd-akram} openmaintainer
@@ -17,7 +17,7 @@ subport ${name} {
 
     github.setup        audacity audacity ${version} Audacity-
     github.tarball_from releases
-    revision            1
+    revision            0
     conflicts           audacity-legacy
     description         multi-track audio editor
 
@@ -27,9 +27,9 @@ subport ${name} {
 
     homepage            https://www.audacityteam.org
 
-    checksums           rmd160  ee816008047fe6641a15a8346de689467764c42e \
-                        sha256  5f89397a60dee54e5a6b05c9947ebce6e1566815050b01c534c52d44353ceb80 \
-                        size    61795370
+    checksums           rmd160  dfe972bf22258cc3ccf643013fecb99d71db3955 \
+                        sha256  5dbe4f494f9fa51e47bfe6dc2c3bf62e1eaedbf087bad79cce51e461c1db3e92 \
+                        size    62087367
 
     distname            ${name}-sources-${version}
 
@@ -79,9 +79,9 @@ subport ${name}-manual {
     github.setup        audacity audacity-manual ${version} v
     github.tarball_from releases
     homepage            https://manual.audacityteam.org
-    checksums           rmd160  c6f6b2046ac76c609cc45c91aefed5c1ad3ba489 \
-                        sha256  c73a786c9fe925e91241ed61fc8999c6c1f763b5482bea850051ad42c842acf8 \
-                        size    26204232
+    checksums           rmd160  f27f7853100bb3cb60c38ed5b1ef87ff59164c42 \
+                        sha256  81c3f161cf025104994b79186dd5e985807b6212e0b27b40d03fe4eee3f2cf95 \
+                        size    26209190
     depends_run         port:audacity
     use_configure       no
     build               {}
