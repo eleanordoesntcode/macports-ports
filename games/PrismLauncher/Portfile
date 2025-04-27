@@ -2,7 +2,7 @@
 
 PortSystem          1.0
 PortGroup           github 1.0
-PortGroup           qt5 1.0
+PortGroup           qt6 1.0
 PortGroup           java 1.0
 PortGroup           cmake 1.1
 
@@ -17,7 +17,7 @@ long_description    PrismLauncher is {*}${description} that allows you to easily
                     multiple installations of Minecraft at once.
 homepage            https://prismlauncher.org/
 
-platforms           {darwin >= 17}
+platforms           {darwin >= 20}
 
 fetch.type          git
 
@@ -36,9 +36,7 @@ java.version        1.8
 
 compiler.cxx_standard 2017
 
-qt5.depends_component \
-                    qtsvg \
-                    qtnetworkauth
+qt6.depends_lib     qtimageformats qtnetworkauth qt5compat
 
 depends_lib-append  port:zlib
 depends_build-append \
@@ -50,5 +48,6 @@ cmake.install_prefix \
 configure.pre_args-replace \
                     -DCMAKE_INSTALL_NAME_DIR="${cmake.install_prefix}/lib" -DCMAKE_INSTALL_NAME_DIR="${cmake.install_prefix}/PrismLauncher.app/Contents/MacOS"
 configure.args-append \
-                    -DLauncher_QT_VERSION_MAJOR=5 \
-                    -DLauncher_BUILD_PLATFORM=macports
+                    -DLauncher_QT_VERSION_MAJOR=6 \
+                    -DLauncher_BUILD_PLATFORM=macports \
+                    -DLauncher_ENABLE_JAVA_DOWNLOADER=ON
