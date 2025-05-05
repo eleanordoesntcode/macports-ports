@@ -12,10 +12,9 @@ categories          textproc
 license             GPL-3
 maintainers         {@eleanordoesntcode gmail.com:eleanor.publicmail} openmaintainer
 description         A fast log explorer
-long_description    klogg is {*}${description} based on glogg project designed \
-                    with programmers and system administrators in mind and can \
-                    be seen as a graphical, interactive combination of grep, \ 
-                    less, and tail.
+long_description    klogg is {*}${description} based on glogg project designed with \
+                    programmers and system administrators in mind and can be seen \
+                    as a graphical, interactive combination of grep, less, and tail.
 homepage            https://klogg.filimonov.dev/
 
 fetch.type          git
