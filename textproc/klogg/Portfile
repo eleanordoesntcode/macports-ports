@@ -20,12 +20,15 @@ homepage            https://klogg.filimonov.dev/
 
 fetch.type          git
 
-cmake.build_type    Release
-
-compiler.cxx_standard 2017
+depends_build-append \
+                    port:ragel
 
 qt5.depends_component \
                     qttools
+
+cmake.build_type    Release
+
+compiler.cxx_standard 2017
 
 cmake.install_prefix \
                     ${applications_dir}
